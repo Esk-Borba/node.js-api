@@ -14,7 +14,9 @@ app.use(express.json());
 const projects = [];
 
 //Middleware
+
 function logRequests(request, response, next) {
+  //mostra os métodos e rotas de uma requisição
   //sera disparado de forma automatica em todas as rotas
   const { method, url } = request; //pega os metodo e a url
 
