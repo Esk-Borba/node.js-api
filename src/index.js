@@ -3,12 +3,14 @@
 //pois com ele não é preciso reiniciar o servidor para que as 
 //novas informações sejam apresentadas
 const express = require('express');
+const cors = require('cors')
 
 const { v4: uuid, validate: isUuid } = require('uuid'); //gera ids aleatórios
 
 const app = express();
 
 //Informa que será recebido JSON, tem que vir antes das rotas
+app.use(cors());
 app.use(express.json());
 
 const projects = [];
